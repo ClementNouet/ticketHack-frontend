@@ -1,11 +1,4 @@
 
-
-fetch('http://localhost:3000/cart')
-    .then(response => response.json())
-    .then(init => {
-
-    })
-
 fetch('http://localhost:3000/cart')
 	.then(response => response.json())
 	.then(data => {
@@ -22,7 +15,7 @@ fetch('http://localhost:3000/cart')
                 <p>${data.cart[i].departure} > ${data.cart[i].arrival}</p>
                 <p>${horaire}</p>
                 <p>${data.cart[i].price}€</p>
-                <button type="button" class='deleteTrip'>X</button>
+                <button type="button" class='deleteTrip' id="${data.cart[i]._id}">X</button>
             </div>
             `
         }
@@ -33,7 +26,6 @@ fetch('http://localhost:3000/cart')
 function deleteTrip() {
 	for (let i = 0; i < document.querySelectorAll('.deleteTrip').length; i++) {
 		document.querySelectorAll('.deleteTrip')[i].addEventListener('click', function () {
-            console.log({_id: ObjectId})
 			fetch(`http://localhost:3000/cart/${this.id}`, { method: 'DELETE' })
 				.then(response => response.json())
 				.then(data => {
