@@ -9,6 +9,16 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   }
 
+  #cart {
+background-color: #EFF2F1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+
 /********************HEADER*******************/
 
   header {
@@ -17,8 +27,10 @@ body {
     justify-content: space-between;
   }
 
-.logo {
-    width: 20%;
+.active {
+    font-weight: 600;;
+    padding-left: 30px;
+    color: #459E85;
 }
 
 .menu {
@@ -72,9 +84,11 @@ body {
   .encart {
     background-color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     width: 300px;
+    max-height: 350px;
     margin: 30px 100px;
+    text-align: center;
   }
 
   
@@ -83,7 +97,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 300px; 
+    width: 100%;
 }
 
 #SearchForm button {
@@ -134,4 +148,26 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.tripsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #F5EEEE;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+.tripsContainer button {
+    color: white;
+    background-color: #459E85;
+    border: 0px;
+    border-radius: 3px;
+    align-self: center;
+    padding: 1px 3px;
 }
