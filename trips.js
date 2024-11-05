@@ -24,20 +24,21 @@ document.querySelector('#search').addEventListener('click', function (event) {
         console.log(data);
 
         if (data.result) {
+            // Vide la liste des voyages affichés
             document.querySelector('#tripsList').innerHTML = '';
 
+            // Parcourt les voyages retournés et les affiche
             for (let i = 0; i < data.trips.length; i++) {
                 const dateObject = new Date(data.trips[i].date); 
                 const hours = dateObject.getHours(); 
                 const minutes = String(dateObject.getMinutes()).padStart(2, '0');
                 const horaire = hours + ':' + minutes;
 
-                // Ajoute chaque voyage au DOM
                 document.querySelector('#tripsList').innerHTML += `
                     <div class="tripsContainer">
                         <p class="trip">${data.trips[i].departure} > ${data.trips[i].arrival}</p>
                         <p class="date">${horaire}</p>
-                        <p class="price">${data.trips[i].price}</p>
+                        <p class="price">${data.trips[i].price}€</p>
                         <button class="addCart" id="${data.trips[i]._id}">Book</button>
                     </div>
                 `;
@@ -52,8 +53,19 @@ document.querySelector('#search').addEventListener('click', function (event) {
             const buttonBook = document.querySelectorAll('.addCart');
             for (let i = 0; i < buttonBook.length; i++) {
                 buttonBook[i].addEventListener('click', function () {
-                    console.log(`${data.trips[i]._id}`);
-                    // Code fetch ici pour chaque bouton
+                    console.log(this.id);
+                    fetch('http://localhost:3000/cart', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ id: this.id }),
+                    })
+                    .then(response => response.json())
+                    .then(dataCart => {
+                        // Ajoutez votre logique ici pour traiter les données de cart
+                        console.log(dataCart);
+                    });
                 });
             }
         } else {
