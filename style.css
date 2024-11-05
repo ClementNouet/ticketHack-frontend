@@ -1,9 +1,137 @@
 body {
-    padding: 50px;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   }
+
+/********************HEADER*******************/
+
+  header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.logo {
+    width: 20%;
+}
+
+.menu {
+    display: flex;
+    padding-right: 70px;
+    align-items: center;
+}
+
+.menu>a {
+    color: #3a3a3a;
+    font-weight: 600;;
+    padding-left: 30px;
+}
+
+.menu>a:hover {
+    color: #459E85;
+
+}
   
   a {
+    text-decoration: none;
     color: #00B7FF;
   }
   
+
+  /********************MAIN*******************/
+
+  main {
+    text-align: center;
+  }
+
+  h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 36px;
+    padding-top: 60px;
+  }
+
+  h2 {
+    color: white;
+    font-weight:100;
+
+  }
+
+  #central {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .encart {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 30px 100px;
+  }
+
+  
+
+  #SearchForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px; 
+}
+
+#SearchForm button {
+    width: 50%;
+    color: white;
+    background-color: #459E85;
+    padding: 10px;
+    border: 0px;
+    border-radius: 3px;
+    margin-top: 100px;
+    align-self: center; /* Centre le bouton */
+}
+
+.recherche {
+    background-color: #e0e0e0;
+    border: 0px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#date {
+    background-color: #e0e0e0 ;
+    border: 0px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+#logoTrain {
+    width: 60%;
+}
+
+#tripEmpty {
+    color: #3a3a3a;
+    font-size: 18px;
+}
+
+hr {
+    background-color: #459E85;
+    color: #459E85;
+    height: 1px;
+    border-radius: 50px;
+    width: 80%;
+}
+
+#tripsList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

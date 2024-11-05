@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TicketHack</title>
+</head>
+<body>
+    <header>
+        <img src="images/logo-tickethack.png" alt="logo-tickethack" class="logo">
+        <div class="menu">
+            <a href="cart.html"><p>Cart</p></a>
+            <a href="booking.html"><p>Booking</p></a>
+        </div>
+    </header>
+    <main>
+        <h1>Explore the world effortless by train</h1>
+        <h2>Compare, book and enjoy cheap prices for train tickets: your start on Tickethack</h2>
+            <div id="central">
+            <div id="search" class="encart">
+                <form action="/submit" method="post" id="SearchForm">
+                    <input type="text" class='recherche' id="departure" name="departure" placeholder="Ville de départ" required>
+                    <input type="text" class='recherche' id="arrival" name="arrival" placeholder="Ville d'arrivée" required>
+                
+                    <input type="date" id="date" name="date">
+                
+                    <button type="submit">Rechercher</button>
+                </form>
+            </div>
+            
+            <div id="tripsList" class="encart">
+                <img src="images/train.png" alt="logo_train" id="logoTrain">
+                <hr>
+                <h2 id="tripEmpty">It's time to book tour futur trip.</h2>
+            </div>
+    </main>
+
+
+    <script src="trips.js"></script>
+</body>
+</html>
