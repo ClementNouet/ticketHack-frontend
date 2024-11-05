@@ -31,8 +31,25 @@ function deleteTrip() {
 				.then(data => {
 					if (data.result) {
 						this.parentNode.remove();
+                        updateTotal();
 					}
 				});
 		});
 	}
 }
+
+
+function updateTotal() {
+fetch('http://localhost:3000/cart')
+	.then(response => response.json())
+	.then(data => {
+        if (data.result) {
+            let result = 0
+            for (let i =0; i< data.cart.length; i++) {
+                result += data.cart[i].price
+            document.querySelector('#total').textContent = `Total : ${result}€`;
+        }
+    }
+});}
+
+updateTotal()
