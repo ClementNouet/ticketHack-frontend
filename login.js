@@ -36,7 +36,7 @@ document
           ).innerHTML += `<p>Email déjà lié à un compte</p>`;
         }
       });
-  });
+  })
 
 document
   .querySelector("#signUpButton")
