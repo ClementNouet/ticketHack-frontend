@@ -63,10 +63,10 @@ document
         console.log(data);
         if (data.result) {
           // Redirige vers la page d'accueil si le compte est créé
-          setTimeout(() => {
+
             window.location.href =
               "https://ticket-hack-frontend-jade.vercel.app/index.html";
-          }, 500);
+
         } else {
           // Affiche un message d'erreur si l'email est déjà lié à un compte
           document.querySelector(
