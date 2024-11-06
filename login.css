@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/background.jpg");
+  background-image: url("./images/background.jpg");
   background-size: cover;
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +19,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-/********************HEADER*******************/
+/****HEADER***/
 
 header {
   background-color: white;
@@ -54,7 +54,7 @@ a {
   color: #00b7ff;
 }
 
-/********************MAIN*******************/
+/****MAIN***/
 
 main {
   text-align: center;
@@ -92,20 +92,19 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  max-width: 350px;
 }
 
 #signUp {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
 }
 
 #signIn {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 

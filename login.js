@@ -25,10 +25,9 @@ document
         console.log(data);
         if (data.result) {
           // Redirige vers la page d'accueil si le compte est créé
-          setTimeout(() => {
-            window.location.href =
-              "https://ticket-hack-frontend-jade.vercel.app/index.html";
-          }, 500);
+          document.querySelector(
+            "#signUp"
+          ).innerHTML += `<p>Bravo, tu as un compte à présent !</p>`;
         } else {
           // Affiche un message d'erreur si l'email est déjà lié à un compte
           document.querySelector(
@@ -36,10 +35,10 @@ document
           ).innerHTML += `<p>Email déjà lié à un compte</p>`;
         }
       });
-  });
+  })
 
 document
-  .querySelector("#signUpButton")
+  .querySelector("#signInButton")
   .addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -62,15 +61,13 @@ document
       .then((data) => {
         console.log(data);
         if (data.result) {
-          // Redirige vers la page d'accueil si le compte est créé
-          setTimeout(() => {
-            window.location.href =
-              "https://ticket-hack-frontend-jade.vercel.app/index.html";
-          }, 500);
+          document.querySelector(
+            "#signIn"
+          ).innerHTML += `<p>Bravo, tu es connecté !</p>`;
         } else {
           // Affiche un message d'erreur si l'email est déjà lié à un compte
           document.querySelector(
-            "#signUp"
+            "#signIn"
           ).innerHTML += `<p>Mauvais email ou mot de passe</p>`;
         }
       });
