@@ -69,6 +69,7 @@ body {
     width: 80%;
     border-radius: 5px;
     padding: 10px;
+    margin-bottom: 20px;
   }
 
   .tripContent button {
@@ -102,4 +103,14 @@ body {
     padding: 0px 15px;
     border: 0px;
     border-radius: 10px;
+  }
+
+  #noTrip {
+    background-color: none;
+    margin: 20px;
+  }
+
+  #planTrip {
+    padding: 50px;
+    font-weight: 600;
   }

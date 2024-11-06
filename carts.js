@@ -20,8 +20,17 @@ fetch('http://localhost:3000/cart')
             `
         }
         deleteTrip()
+    } else if (!data.result){
+        document.querySelector('#resume').innerHTML = ''
+        document.querySelector('#resume').innerHTML = `
+        <div class="noTrip">
+            <p id"noTrip">No tickets in your cart</p>
+            <p id="planTrip">why note plan a trip ?</p>
+        </div>
+        `
     }
-});
+}
+);
 
 function deleteTrip() {
 	for (let i = 0; i < document.querySelectorAll('.deleteTrip').length; i++) {
@@ -53,3 +62,28 @@ fetch('http://localhost:3000/cart')
 });}
 
 updateTotal()
+
+
+
+function addBooking() {
+    const trips = document.querySelectorAll('.deleteTrip')
+    for (let i = 0; i < trips.length; i++) {
+        fetch(`http://localhost:3000/bookings/${trips[i].id}`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        }).then( () => {
+            setTimeout(() => {
+                location.reload();
+            }, 300);
+        })
+    }
+}
+
+const purchase = document.querySelector('#purchase');
+purchase.addEventListener('click', function() {
+    addBooking()
+})
+
