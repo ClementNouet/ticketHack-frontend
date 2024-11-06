@@ -62,12 +62,12 @@ document
         console.log(data);
         if (data.result) {
           document.querySelector(
-            "#signUp"
+            "#signIn"
           ).innerHTML += `<p>Bravo, tu es connecté !</p>`;
         } else {
           // Affiche un message d'erreur si l'email est déjà lié à un compte
           document.querySelector(
-            "#signUp"
+            "#signIn"
           ).innerHTML += `<p>Mauvais email ou mot de passe</p>`;
         }
       });
