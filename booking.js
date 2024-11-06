@@ -1,4 +1,4 @@
-fetch('https://ticket-hack-backend-nlie.vercel.app/bookings')
+fetch('https://ticket-hack-backend-beige.vercel.app/bookings')
 	.then(response => response.json())
 	.then(data => {
         if (data.result) {

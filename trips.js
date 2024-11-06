@@ -12,7 +12,7 @@ document.querySelector('#search').addEventListener('click', function (event) {
     };
 
     // Effectue la requête POST pour rechercher les voyages
-    fetch('https://ticket-hack-backend-nlie.vercel.app/trips', {
+    fetch('https://ticket-hack-backend-beige.vercel.app/trips', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ document.querySelector('#search').addEventListener('click', function (event) {
             for (let i = 0; i < buttonBook.length; i++) {
                 buttonBook[i].addEventListener('click', function () {
                     console.log(this.id);
-                    fetch('https://ticket-hack-backend-nlie.vercel.app/cart', {
+                    fetch('https://ticket-hack-backend-beige.vercel.app/cart', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

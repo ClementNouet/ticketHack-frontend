@@ -1,5 +1,5 @@
 
-fetch('https://ticket-hack-backend-nlie.vercel.app/cart')
+fetch('https://ticket-hack-backend-beige.vercel.app/cart')
 	.then(response => response.json())
 	.then(data => {
         if (data.result) {
@@ -35,7 +35,7 @@ fetch('https://ticket-hack-backend-nlie.vercel.app/cart')
 function deleteTrip() {
 	for (let i = 0; i < document.querySelectorAll('.deleteTrip').length; i++) {
 		document.querySelectorAll('.deleteTrip')[i].addEventListener('click', function () {
-			fetch(`https://ticket-hack-backend-nlie.vercel.app/cart/${this.id}`, { method: 'DELETE' })
+			fetch(`https://ticket-hack-backend-beige.vercel.app/cart/${this.id}`, { method: 'DELETE' })
 				.then(response => response.json())
 				.then(data => {
 					if (data.result) {
@@ -49,7 +49,7 @@ function deleteTrip() {
 
 
 function updateTotal() {
-fetch('https://ticket-hack-backend-nlie.vercel.app/cart')
+fetch('https://ticket-hack-backend-beige.vercel.app/cart')
 	.then(response => response.json())
 	.then(data => {
         if (data.result) {
@@ -68,7 +68,7 @@ updateTotal()
 function addBooking() {
     const trips = document.querySelectorAll('.deleteTrip')
     for (let i = 0; i < trips.length; i++) {
-        fetch(`https://ticket-hack-backend-nlie.vercel.app/bookings/${trips[i].id}`, {
+        fetch(`https://ticket-hack-backend-beige.vercel.app/bookings/${trips[i].id}`, {
             method: 'POST'
         })
         .then(response => response.json())
