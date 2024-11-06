@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>TicketHack</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo-tickethack.png" alt="logo-tickethack" class="logo"></a>
+        <div class="menu">
+            <a href="cart.html"><p>Cart</p></a>
+            <a href="booking.html"><p>Booking</p></a>
+            <a href="login.html"><p>Login</p></a>
+        </div>
+    </header>
+    <main>
+        <h1>Join Tickethack</h1>
+        <h2>Compare, book and enjoy cheap prices for train tickets: your start on Tickethack</h2>
+            <div id="central">
+            <div id="signUp" class="encart">
+                <form action="/submit" method="post" id="SearchForm">
+                    <input type="text" class='signUp' id="name" name="name" placeholder="Name" required>
+                    <input type="email" class='signUp' id="email" name="email" placeholder="E-mail" required>
+                    <input type="password" class='signUp' id="password" name="password" placeholder="Password" required>
+                
+                    <button id='signUpButton'>Sign Up</button>
+                </form>
+            </div>
+
+            <div id="central">
+            <div id="signIn" class="encart">
+                <form action="/submit" method="post" id="signInForm">
+                    <input type="email" class='signIn' id="emailSignIn" name="email" placeholder="E-mail" required>
+                    <input type="password" class='signIn' id="passwordSignIn" name="password" placeholder="Password" required>
+                
+                    <button id='signIn'>Sign In</button>
+                </form>
+            </div>
+            
+          
+    </main>
+
+
+    <script src="login.js"></script>
+</body>
+</html>
