@@ -24,7 +24,7 @@ document
       .then((data) => {
         console.log(data);
         if (data.result) {
-          // Redirige vers la page d'accueil si le compte est créé
+          // Affiche un message si le compte est créé
           document.querySelector(
             "#signUp"
           ).innerHTML += `<p>Bravo, tu as un compte à présent !</p>`;
@@ -35,7 +35,7 @@ document
           ).innerHTML += `<p>Email déjà lié à un compte</p>`;
         }
       });
-  })
+  });
 
 document
   .querySelector("#signInButton")
@@ -65,7 +65,7 @@ document
             "#signIn"
           ).innerHTML += `<p>Bravo, tu es connecté !</p>`;
         } else {
-          // Affiche un message d'erreur si l'email est déjà lié à un compte
+          // Affiche un message d'erreur si l'email ou le mdp est erroné
           document.querySelector(
             "#signIn"
           ).innerHTML += `<p>Mauvais email ou mot de passe</p>`;
